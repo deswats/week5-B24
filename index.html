@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>RPS Javasript Exercise</title>
+</head>
+
+<body>
+<h1>My Javascript Exercise </h1>
+
+<input type="text" name="username" id="username">
+
+<button onclick="sayHello()">Click Me!</button>
+<hr>
+
+<h2>Rock Paper Scissor</h2>
+
+<button onclick="buttonPressed(0)">Rock</button>
+<button onclick="buttonPressed(1)">Paper</button>
+<button onclick="buttonPressed(2)">Scissor</button>
+
+<script type="text/javascript">
+	var userScore = 0;
+	var compScore = 0;
+
+
+	function sayHello(){
+	var name = document.getElementById("username").value;
+		alert('Hello '+name);
+	}
+
+function buttonPressed(userChoice){
+var computerChoice = Math.floor(Math.random()*2);
+ if (userChoice == 0){
+ 	if (computerChoice == 0 ) {
+ 	alert ("Computer select Rock, Its a Draw!");
+}
+else if (computerChoice == 1){
+	compScore ++;
+	alert("Computer select Paper, You Lose! "+"You "+userScore+ " Computer " +compScore);
+}
+else {
+	userScore ++;
+	alert("Computer select Scissor, You Win! "+"You "+userScore+ " Computer " +compScore);
+}
+}
+else if (userChoice == 1){
+ 	if (computerChoice == 0 ) {
+ 		userScore ++;
+ 	alert ("Computer select Rock, You Win! "+"You "+userScore+ " Computer " +compScore);
+}
+else if (computerChoice == 1){
+	alert("Computer select Paper, Its a Draw!");
+}
+else {
+	compScore ++;
+	alert("Computer select Scissor, You Lose! "+"You "+userScore+ " Computer " +compScore);
+}
+}
+else {
+ 	if (computerChoice == 0 ) {
+ 		compScore ++;
+ 	alert ("Computer select Rock, You Lose! "+"You "+userScore+ " Computer " +compScore);
+}
+else if (computerChoice == 1){
+	userScore ++;
+	alert("Computer select Paper, You Win! "+"You "+userScore+ " Computer " +compScore);
+}
+else {
+	alert("Computer select Scissor, Its a Draw!");
+}
+}
+}
+
+
+
+
+
+</script>
+		
+
+
+</body>
+</html>
